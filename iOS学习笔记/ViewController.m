@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "SYRProtocol.h"
 
-@interface ViewController ()
+//当前类是委托类
+@interface ViewController ()<SYRProtocol>
 /**在.m文件里的interface中添加该类的私有属性,   .m文件的interface称为类扩展**/
 @property(nonatomic,weak)UILabel *label;
+@property(nonatomic,weak)id delegate;
 @end
 
 @implementation ViewController
@@ -32,5 +35,8 @@
     NSLog(@"%s",__func__);
 }
 
+-(void)showOtherViewMethods:(NSArray *)array :(NSString *)string{
+    
+}
 
 @end

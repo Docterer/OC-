@@ -28,6 +28,7 @@
 		F1E7044B20D29CD1009D82F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1E7044D20D29CD1009D82F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1E7044E20D29CD1009D82F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1E7045520D3872F009D82F1 /* SYRProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				F1E7044D20D29CD1009D82F1 /* Info.plist */,
 				F1E7044E20D29CD1009D82F1 /* main.m */,
 				F1E7044520D29CD1009D82F1 /* iOS____.xcdatamodeld */,
+				F1E7045520D3872F009D82F1 /* SYRProtocol.h */,
 			);
 			path = "iOS学习笔记";
 			sourceTree = "<group>";
