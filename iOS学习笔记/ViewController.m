@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor grayColor]];
     [self clickRedButton];
     // Do any additional setup after loading the view, typically from a nib.
 }

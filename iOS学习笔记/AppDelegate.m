@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SYRViewController.h"
+#import "SYRTabViewViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    //SYRViewController *mv = [[SYRViewController alloc]init];
+    SYRTabViewViewController *tab = [[SYRTabViewViewController alloc]init];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tab];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //使用navigationController
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

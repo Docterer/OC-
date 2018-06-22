@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1089C8A20DB9B4B00A36430 /* SYRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1089C8920DB9B4B00A36430 /* SYRViewController.m */; };
+		F1089C9020DCD70000A36430 /* CMTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1089C8F20DCD70000A36430 /* CMTabView.m */; };
+		F1089C9420DD061500A36430 /* SYRTabViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1089C9320DD061500A36430 /* SYRTabViewViewController.m */; };
+		F1089C9720DD0ABB00A36430 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1089C9620DD0ABB00A36430 /* Media.xcassets */; };
 		F1E7043E20D29CD1009D82F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7043D20D29CD1009D82F1 /* AppDelegate.m */; };
 		F1E7044120D29CD1009D82F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7044020D29CD1009D82F1 /* ViewController.m */; };
 		F1E7044420D29CD1009D82F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7044220D29CD1009D82F1 /* Main.storyboard */; };
@@ -14,9 +18,17 @@
 		F1E7044920D29CD1009D82F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E7044820D29CD1009D82F1 /* Assets.xcassets */; };
 		F1E7044C20D29CD1009D82F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7044A20D29CD1009D82F1 /* LaunchScreen.storyboard */; };
 		F1E7044F20D29CD1009D82F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7044E20D29CD1009D82F1 /* main.m */; };
+		F1E7045A20D89AF7009D82F1 /* SYRH5WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7045920D89AF7009D82F1 /* SYRH5WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1089C8820DB9B4B00A36430 /* SYRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRViewController.h; sourceTree = "<group>"; };
+		F1089C8920DB9B4B00A36430 /* SYRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRViewController.m; sourceTree = "<group>"; };
+		F1089C8E20DCD70000A36430 /* CMTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTabView.h; sourceTree = "<group>"; };
+		F1089C8F20DCD70000A36430 /* CMTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTabView.m; sourceTree = "<group>"; };
+		F1089C9220DD061500A36430 /* SYRTabViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRTabViewViewController.h; sourceTree = "<group>"; };
+		F1089C9320DD061500A36430 /* SYRTabViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRTabViewViewController.m; sourceTree = "<group>"; };
+		F1089C9620DD0ABB00A36430 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F1E7043920D29CD1009D82F1 /* iOS学习笔记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS学习笔记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7043C20D29CD1009D82F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1E7043D20D29CD1009D82F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +41,8 @@
 		F1E7044D20D29CD1009D82F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1E7044E20D29CD1009D82F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1E7045520D3872F009D82F1 /* SYRProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRProtocol.h; sourceTree = "<group>"; };
+		F1E7045820D89AF7009D82F1 /* SYRH5WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRH5WebViewController.h; sourceTree = "<group>"; };
+		F1E7045920D89AF7009D82F1 /* SYRH5WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRH5WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1089C8D20DCD6B800A36430 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1089C8E20DCD70000A36430 /* CMTabView.h */,
+				F1089C8F20DCD70000A36430 /* CMTabView.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1089C9120DD05D800A36430 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				F1089C9220DD061500A36430 /* SYRTabViewViewController.h */,
+				F1089C9320DD061500A36430 /* SYRTabViewViewController.m */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
 		F1E7043020D29CD1009D82F1 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +93,8 @@
 		F1E7043B20D29CD1009D82F1 /* iOS学习笔记 */ = {
 			isa = PBXGroup;
 			children = (
+				F1089C9120DD05D800A36430 /* TabView */,
+				F1089C8D20DCD6B800A36430 /* Model */,
 				F1E7043C20D29CD1009D82F1 /* AppDelegate.h */,
 				F1E7043D20D29CD1009D82F1 /* AppDelegate.m */,
 				F1E7043F20D29CD1009D82F1 /* ViewController.h */,
@@ -72,6 +106,11 @@
 				F1E7044E20D29CD1009D82F1 /* main.m */,
 				F1E7044520D29CD1009D82F1 /* iOS____.xcdatamodeld */,
 				F1E7045520D3872F009D82F1 /* SYRProtocol.h */,
+				F1E7045820D89AF7009D82F1 /* SYRH5WebViewController.h */,
+				F1E7045920D89AF7009D82F1 /* SYRH5WebViewController.m */,
+				F1089C8820DB9B4B00A36430 /* SYRViewController.h */,
+				F1089C8920DB9B4B00A36430 /* SYRViewController.m */,
+				F1089C9620DD0ABB00A36430 /* Media.xcassets */,
 			);
 			path = "iOS学习笔记";
 			sourceTree = "<group>";
@@ -136,6 +175,7 @@
 			files = (
 				F1E7044C20D29CD1009D82F1 /* LaunchScreen.storyboard in Resources */,
 				F1E7044920D29CD1009D82F1 /* Assets.xcassets in Resources */,
+				F1089C9720DD0ABB00A36430 /* Media.xcassets in Resources */,
 				F1E7044420D29CD1009D82F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,10 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E7045A20D89AF7009D82F1 /* SYRH5WebViewController.m in Sources */,
+				F1089C8A20DB9B4B00A36430 /* SYRViewController.m in Sources */,
 				F1E7044120D29CD1009D82F1 /* ViewController.m in Sources */,
 				F1E7043E20D29CD1009D82F1 /* AppDelegate.m in Sources */,
+				F1089C9420DD061500A36430 /* SYRTabViewViewController.m in Sources */,
 				F1E7044F20D29CD1009D82F1 /* main.m in Sources */,
 				F1E7044720D29CD1009D82F1 /* iOS____.xcdatamodeld in Sources */,
+				F1089C9020DCD70000A36430 /* CMTabView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +329,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PP5PW8MM63;
+				DEVELOPMENT_TEAM = 66429YD7GV;
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syr.study.day.iOS----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.syr.study.day.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,10 +344,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PP5PW8MM63;
+				DEVELOPMENT_TEAM = 66429YD7GV;
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syr.study.day.iOS----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.syr.study.day.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
