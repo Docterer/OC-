@@ -94,7 +94,7 @@
     } else {
         // Fallback on earlier versions
     }
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) configuration:config];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) configuration:config];
     // UI代理
 //    _webView.UIDelegate = self;
     // 导航代理
