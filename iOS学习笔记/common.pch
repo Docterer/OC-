@@ -1,0 +1,30 @@
+//
+//  common.pch
+//  iOS学习笔记
+//
+//  Created by 单怡然 on 2018/7/5.
+//  Copyright © 2018年 单怡然. All rights reserved.
+//
+
+#ifndef common_pch
+#define common_pch
+
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+// 3.常用对象
+#define kApplication [UIApplication sharedApplication]
+#define kAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+#define kNotificationCenter [NSNotificationCenter defaultCenter]
+
+//作者：槑头脑
+//链接：https://www.jianshu.com/p/7440cd404713
+//來源：简书
+//简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
+#ifdef __OBJC__     //判断一下，之后的OC文件才会导入下面的头文件
+
+#endif              //OC文件判断结束
+
+#endif /* common_pch */

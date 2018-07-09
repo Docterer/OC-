@@ -29,6 +29,7 @@
 		F1089C9220DD061500A36430 /* SYRTabViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRTabViewViewController.h; sourceTree = "<group>"; };
 		F1089C9320DD061500A36430 /* SYRTabViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRTabViewViewController.m; sourceTree = "<group>"; };
 		F1089C9620DD0ABB00A36430 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		F15A622220EE17BC008219CB /* common.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.pch; sourceTree = "<group>"; };
 		F1E7043920D29CD1009D82F1 /* iOS学习笔记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS学习笔记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7043C20D29CD1009D82F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1E7043D20D29CD1009D82F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 				F1089C8820DB9B4B00A36430 /* SYRViewController.h */,
 				F1089C8920DB9B4B00A36430 /* SYRViewController.m */,
 				F1089C9620DD0ABB00A36430 /* Media.xcassets */,
+				F15A622220EE17BC008219CB /* common.pch */,
 			);
 			path = "iOS学习笔记";
 			sourceTree = "<group>";

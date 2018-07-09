@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface SYRH5WebViewController : UIViewController
+@interface SYRH5WebViewController : UIViewController<WKNavigationDelegate>
 
 @end
