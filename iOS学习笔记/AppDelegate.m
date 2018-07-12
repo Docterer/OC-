@@ -69,24 +69,32 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"iOS____"];
-            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
-                if (error != nil) {
-                    // Replace this implementation with code to handle the error appropriately.
-                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    
-                    /*
-                     Typical reasons for an error here include:
-                     * The parent directory does not exist, cannot be created, or disallows writing.
-                     * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                     * The device is out of space.
-                     * The store could not be migrated to the current model version.
-                     Check the error message to determine what the actual problem was.
-                    */
-                    NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-                    abort();
-                }
-            }];
+            if (@available(iOS 10.0, *)) {
+                _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"iOS____"];
+            } else {
+                // Fallback on earlier versions
+            }
+            if (@available(iOS 10.0, *)) {
+                [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
+                    if (error != nil) {
+                        // Replace this implementation with code to handle the error appropriately.
+                        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                        
+                        /*
+                         Typical reasons for an error here include:
+                         * The parent directory does not exist, cannot be created, or disallows writing.
+                         * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                         * The device is out of space.
+                         * The store could not be migrated to the current model version.
+                         Check the error message to determine what the actual problem was.
+                         */
+                        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                        abort();
+                    }
+                }];
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
     
@@ -105,5 +113,19 @@
         abort();
     }
 }
+
+#pragma mark - 3D Touch
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    //不管APP在后台还是进程被杀死，只要通过主屏快捷操作进来的，都会调用这个方法
+    NSLog(@"name:%@\ntype:%@", shortcutItem.localizedTitle, shortcutItem.type);
+    if([shortcutItem.type isEqualToString:@"cn.damon.DM3DTouchDemo.openShare"]){
+        SYRTabViewViewController *tab = self.window.rootViewController.childViewControllers[0];
+        NSLog(@"\n%@",self.window.rootViewController.childViewControllers);
+        tab.selectedIndex = 1;
+        tab.selectedViewController = [tab.viewControllers objectAtIndex:1];
+    }
+}
+
 
 @end
