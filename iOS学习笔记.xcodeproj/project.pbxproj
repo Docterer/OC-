@@ -19,6 +19,14 @@
 		F1E7044C20D29CD1009D82F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7044A20D29CD1009D82F1 /* LaunchScreen.storyboard */; };
 		F1E7044F20D29CD1009D82F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7044E20D29CD1009D82F1 /* main.m */; };
 		F1E7045A20D89AF7009D82F1 /* SYRH5WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7045920D89AF7009D82F1 /* SYRH5WebViewController.m */; };
+		F1EACCBD20FF75140095F4BA /* PgySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCBB20FF75130095F4BA /* PgySDK.framework */; };
+		F1EACCBE20FF75140095F4BA /* PgyUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCBC20FF75130095F4BA /* PgyUpdate.framework */; };
+		F1EACCC120FF759A0095F4BA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCC020FF759A0095F4BA /* CoreTelephony.framework */; };
+		F1EACCC320FF75AE0095F4BA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCC220FF75AE0095F4BA /* OpenGLES.framework */; };
+		F1EACCC520FF75C70095F4BA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCC420FF75C70095F4BA /* CoreMotion.framework */; };
+		F1EACCC720FF75D70095F4BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCC620FF75D70095F4BA /* AudioToolbox.framework */; };
+		F1EACCC920FF75DE0095F4BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCC820FF75DE0095F4BA /* AVFoundation.framework */; };
+		F1EACCCB20FF76000095F4BA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EACCCA20FF76000095F4BA /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,14 @@
 		F1E7045520D3872F009D82F1 /* SYRProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRProtocol.h; sourceTree = "<group>"; };
 		F1E7045820D89AF7009D82F1 /* SYRH5WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRH5WebViewController.h; sourceTree = "<group>"; };
 		F1E7045920D89AF7009D82F1 /* SYRH5WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRH5WebViewController.m; sourceTree = "<group>"; };
+		F1EACCBB20FF75130095F4BA /* PgySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PgySDK.framework; sourceTree = "<group>"; };
+		F1EACCBC20FF75130095F4BA /* PgyUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PgyUpdate.framework; sourceTree = "<group>"; };
+		F1EACCC020FF759A0095F4BA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F1EACCC220FF75AE0095F4BA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F1EACCC420FF75C70095F4BA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F1EACCC620FF75D70095F4BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F1EACCC820FF75DE0095F4BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F1EACCCA20FF76000095F4BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EACCCB20FF76000095F4BA /* SystemConfiguration.framework in Frameworks */,
+				F1EACCC920FF75DE0095F4BA /* AVFoundation.framework in Frameworks */,
+				F1EACCC720FF75D70095F4BA /* AudioToolbox.framework in Frameworks */,
+				F1EACCC520FF75C70095F4BA /* CoreMotion.framework in Frameworks */,
+				F1EACCC320FF75AE0095F4BA /* OpenGLES.framework in Frameworks */,
+				F1EACCC120FF759A0095F4BA /* CoreTelephony.framework in Frameworks */,
+				F1EACCBE20FF75140095F4BA /* PgyUpdate.framework in Frameworks */,
+				F1EACCBD20FF75140095F4BA /* PgySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +102,11 @@
 		F1E7043020D29CD1009D82F1 = {
 			isa = PBXGroup;
 			children = (
+				F1EACCBB20FF75130095F4BA /* PgySDK.framework */,
+				F1EACCBC20FF75130095F4BA /* PgyUpdate.framework */,
 				F1E7043B20D29CD1009D82F1 /* iOS学习笔记 */,
 				F1E7043A20D29CD1009D82F1 /* Products */,
+				F1EACCBF20FF75990095F4BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +142,19 @@
 				F15A622220EE17BC008219CB /* common.pch */,
 			);
 			path = "iOS学习笔记";
+			sourceTree = "<group>";
+		};
+		F1EACCBF20FF75990095F4BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1EACCCA20FF76000095F4BA /* SystemConfiguration.framework */,
+				F1EACCC820FF75DE0095F4BA /* AVFoundation.framework */,
+				F1EACCC620FF75D70095F4BA /* AudioToolbox.framework */,
+				F1EACCC420FF75C70095F4BA /* CoreMotion.framework */,
+				F1EACCC220FF75AE0095F4BA /* OpenGLES.framework */,
+				F1EACCC020FF759A0095F4BA /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +372,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66429YD7GV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS学习笔记/common.pch";
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";
@@ -349,6 +393,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66429YD7GV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS学习笔记/common.pch";
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";

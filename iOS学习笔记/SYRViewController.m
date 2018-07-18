@@ -42,6 +42,12 @@
     //[self.view bringSubviewToFront:label];
 }
 
+
+- (void)didAddButton{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"确定" forState:<#(UIControlState)#>];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
