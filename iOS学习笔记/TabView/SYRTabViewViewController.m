@@ -9,19 +9,26 @@
 #import "SYRTabViewViewController.h"
 #import "SYRViewController.h"
 #import "SYRH5WebViewController.h"
+#import "SpeakToTxtViewController.h"
 
 @interface SYRTabViewViewController ()
 @property(nonatomic,strong) SYRH5WebViewController *syrH5View;
 @property(nonatomic,strong) SYRViewController *syrView;
+@property(nonatomic,strong) SpeakToTxtViewController *speakView;
 @end
 
 @implementation SYRTabViewViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBar.hidden = YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:self.syrH5View];
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:self.syrView];
-    self.viewControllers = @[nav1,nav2];
+    UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:self.speakView];
+    self.viewControllers = @[nav1,nav2,nav3];
 }
 
 #pragma tab set
@@ -43,6 +50,16 @@
         [_syrView.tabBarItem setImage:[UIImage imageNamed:@"联系人"]];
     }
     return _syrView;
+}
+
+-(SpeakToTxtViewController *)speakView
+{
+    if(_speakView == nil){
+        _speakView = [[SpeakToTxtViewController alloc]init];
+        [_speakView.tabBarItem setTitle:@"语音"];
+        [_speakView.tabBarItem setImage:[UIImage imageNamed:@"动态"]];
+    }
+    return _speakView;
 }
 
 - (void)didReceiveMemoryWarning {

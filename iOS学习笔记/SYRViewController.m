@@ -43,10 +43,10 @@
 }
 
 
-- (void)didAddButton{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"确定" forState:<#(UIControlState)#>];
-}
+//- (void)didAddButton{
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setTitle:@"确定" forState:<#(UIControlState)#>];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

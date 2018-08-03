@@ -11,6 +11,10 @@
 		F1089C9020DCD70000A36430 /* CMTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1089C8F20DCD70000A36430 /* CMTabView.m */; };
 		F1089C9420DD061500A36430 /* SYRTabViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1089C9320DD061500A36430 /* SYRTabViewViewController.m */; };
 		F1089C9720DD0ABB00A36430 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1089C9620DD0ABB00A36430 /* Media.xcassets */; };
+		F1329E7721059F2200539268 /* PgySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1329E7521059F2200539268 /* PgySDK.framework */; };
+		F1329E7821059F2200539268 /* PgyUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1329E7621059F2200539268 /* PgyUpdate.framework */; };
+		F1329E7B2105A01800539268 /* SpeakToTxtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1329E7A2105A01800539268 /* SpeakToTxtViewController.m */; };
+		F1329E7D2105A04800539268 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1329E7C2105A04800539268 /* Speech.framework */; };
 		F1E7043E20D29CD1009D82F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7043D20D29CD1009D82F1 /* AppDelegate.m */; };
 		F1E7044120D29CD1009D82F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7044020D29CD1009D82F1 /* ViewController.m */; };
 		F1E7044420D29CD1009D82F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7044220D29CD1009D82F1 /* Main.storyboard */; };
@@ -35,6 +39,11 @@
 		F1089C9220DD061500A36430 /* SYRTabViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRTabViewViewController.h; sourceTree = "<group>"; };
 		F1089C9320DD061500A36430 /* SYRTabViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRTabViewViewController.m; sourceTree = "<group>"; };
 		F1089C9620DD0ABB00A36430 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		F1329E7521059F2200539268 /* PgySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PgySDK.framework; path = "iOS学习笔记/PgySDK.framework"; sourceTree = "<group>"; };
+		F1329E7621059F2200539268 /* PgyUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PgyUpdate.framework; path = "iOS学习笔记/PgyUpdate.framework"; sourceTree = "<group>"; };
+		F1329E792105A01800539268 /* SpeakToTxtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeakToTxtViewController.h; sourceTree = "<group>"; };
+		F1329E7A2105A01800539268 /* SpeakToTxtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeakToTxtViewController.m; sourceTree = "<group>"; };
+		F1329E7C2105A04800539268 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		F15A622220EE17BC008219CB /* common.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.pch; sourceTree = "<group>"; };
 		F1E7043920D29CD1009D82F1 /* iOS学习笔记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS学习笔记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7043C20D29CD1009D82F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1329E7D2105A04800539268 /* Speech.framework in Frameworks */,
+				F1329E7721059F2200539268 /* PgySDK.framework in Frameworks */,
+				F1329E7821059F2200539268 /* PgyUpdate.framework in Frameworks */,
 				F1EACCCB20FF76000095F4BA /* SystemConfiguration.framework in Frameworks */,
 				F1EACCC920FF75DE0095F4BA /* AVFoundation.framework in Frameworks */,
 				F1EACCC720FF75D70095F4BA /* AudioToolbox.framework in Frameworks */,
@@ -132,6 +144,8 @@
 				F1089C8920DB9B4B00A36430 /* SYRViewController.m */,
 				F1089C9620DD0ABB00A36430 /* Media.xcassets */,
 				F15A622220EE17BC008219CB /* common.pch */,
+				F1329E792105A01800539268 /* SpeakToTxtViewController.h */,
+				F1329E7A2105A01800539268 /* SpeakToTxtViewController.m */,
 			);
 			path = "iOS学习笔记";
 			sourceTree = "<group>";
@@ -139,6 +153,9 @@
 		F1EACCBF20FF75990095F4BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1329E7C2105A04800539268 /* Speech.framework */,
+				F1329E7521059F2200539268 /* PgySDK.framework */,
+				F1329E7621059F2200539268 /* PgyUpdate.framework */,
 				F1EACCCA20FF76000095F4BA /* SystemConfiguration.framework */,
 				F1EACCC820FF75DE0095F4BA /* AVFoundation.framework */,
 				F1EACCC620FF75D70095F4BA /* AudioToolbox.framework */,
@@ -225,6 +242,7 @@
 				F1089C8A20DB9B4B00A36430 /* SYRViewController.m in Sources */,
 				F1E7044120D29CD1009D82F1 /* ViewController.m in Sources */,
 				F1E7043E20D29CD1009D82F1 /* AppDelegate.m in Sources */,
+				F1329E7B2105A01800539268 /* SpeakToTxtViewController.m in Sources */,
 				F1089C9420DD061500A36430 /* SYRTabViewViewController.m in Sources */,
 				F1E7044F20D29CD1009D82F1 /* main.m in Sources */,
 				F1E7044720D29CD1009D82F1 /* iOS____.xcdatamodeld in Sources */,
@@ -367,11 +385,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS学习笔记",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS学习笔记/common.pch";
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syr.study.day.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,11 +407,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS学习笔记",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS学习笔记/common.pch";
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syr.study.day.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
