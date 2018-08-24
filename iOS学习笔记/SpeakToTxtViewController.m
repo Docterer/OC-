@@ -15,6 +15,10 @@
 @property (nonatomic ,strong) UILabel *recognizerLabel;
 @property(nonatomic,strong)SFSpeechRecognizer * recognizer ;
 
+@property(nonatomic, assign) BOOL touchUpFlag;
+@property(nonatomic, strong) NSTimer *longPressTimer;
+@property(nonatomic, assign) BOOL longPressFlag;
+
 
 //语音识别功能
 @property(nonatomic,strong)SFSpeechAudioBufferRecognitionRequest * recognitionRequest ;
@@ -64,12 +68,20 @@
     button.layer.cornerRadius = button.frame.size.width/2;
     [button setBackgroundColor:[UIColor grayColor]];
     //[button setBackgroundImage:[UIImage imageNamed:@"login-del"] forState:UIControlStateNormal];
+    
+//    [button addTarget:self action:@selector(offsetButtonTouchBegin:)forControlEvents:UIControlEventTouchDown];
+//
+//    [button addTarget:self action:@selector(offsetButtonTouchEnd:)forControlEvents:UIControlEventTouchUpInside];
+    
+    [button addTarget:self action:@selector(offsetButtonTouchEnd:)forControlEvents:UIControlEventTouchUpOutside];
+    
+
     //button点击事件
     [button addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
     //button长按事件
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(btnLong:)];
-    longPress.minimumPressDuration = 0.5;
-    [button addGestureRecognizer:longPress];
+//    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(btnLong:)];
+//    longPress.minimumPressDuration = 0.5;
+//    [button addGestureRecognizer:longPress];
     
     _recordingBtn = button;
     [button setTitle:@"开始" forState:UIControlStateNormal];
@@ -130,15 +142,58 @@
 
 #pragma mark - click
 - (void)BtnClick:(UIButton *)sender {
-    if ([self.audioEngine isRunning]) {
+//    if ([self.audioEngine isRunning]) {
+//        [self.audioEngine stop];
+//        [self.recognitionRequest endAudio];
+//        self.recordingBtn.enabled = YES;
+//        [self.recordingBtn setTitle:@"开始" forState:UIControlStateNormal];
+//    }else{
+//        [self startRecording];
+//        [self.recordingBtn setTitle:@"停止" forState:UIControlStateNormal];
+//    }
+    NSLog(@"执行了点击事件");
+    
+    //之前配置的白名单，就是需要跳转对方App的key，即对方设置的url
+    // xxxxx :可以将参数拼接在url后边，这样在另一个APP的openUrl方法中，解析这个url中的参数就可以了
+    NSString * UrlStr = @"bbq://name=iPhone6&price=5288";
+    
+    NSURL * url = [NSURL URLWithString:UrlStr];
+    
+    // 在这里可以先做个判断
+    if ([[UIApplication sharedApplication]canOpenURL:url]) {
+        
+        [[UIApplication sharedApplication] openURL:url options:nil completionHandler:nil];
+        
+    }else{
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"跳转的应用程序未安装" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+        
+        [alert show];
+    }
+
+}
+
+#pragma mark - longPress
+- (void)btnLong:(UIButton *)sender{
+    
+    if (!self.touchUpFlag) {
+        self.longPressFlag = YES;
+        NSLog(@"长按事件");
+        [self startRecording];
+    }
+    //[self.longPressTimer invalidate];
+}
+
+-(void) offsetButtonTouchEnd:(id)sender{
+    
+    if (self.touchUpFlag) {
+        NSLog(@"计时结束");
+        self.longPressFlag = NO;
         [self.audioEngine stop];
         [self.recognitionRequest endAudio];
         self.recordingBtn.enabled = YES;
-        [self.recordingBtn setTitle:@"开始" forState:UIControlStateNormal];
-    }else{
-        [self startRecording];
-        [self.recordingBtn setTitle:@"停止" forState:UIControlStateNormal];
     }
+    //[self.longPressTimer invalidate];
 }
 
 #pragma mark - function

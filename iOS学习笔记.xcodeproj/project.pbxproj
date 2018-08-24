@@ -15,6 +15,10 @@
 		F1329E7821059F2200539268 /* PgyUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1329E7621059F2200539268 /* PgyUpdate.framework */; };
 		F1329E7B2105A01800539268 /* SpeakToTxtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1329E7A2105A01800539268 /* SpeakToTxtViewController.m */; };
 		F1329E7D2105A04800539268 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1329E7C2105A04800539268 /* Speech.framework */; };
+		F1353E2A212FE672004502F4 /* SYRFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1353E29212FE672004502F4 /* SYRFaceViewController.m */; };
+		F1353E2C212FEA6A004502F4 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1353E2B212FEA6A004502F4 /* GLKit.framework */; };
+		F198EF77211BD3C60059C384 /* SYRWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F198EF76211BD3C60059C384 /* SYRWebView.m */; };
+		F198EF79211BEE6E0059C384 /* demo-tab-webview in Resources */ = {isa = PBXBuildFile; fileRef = F198EF78211BEE6E0059C384 /* demo-tab-webview */; };
 		F1E7043E20D29CD1009D82F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7043D20D29CD1009D82F1 /* AppDelegate.m */; };
 		F1E7044120D29CD1009D82F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7044020D29CD1009D82F1 /* ViewController.m */; };
 		F1E7044420D29CD1009D82F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7044220D29CD1009D82F1 /* Main.storyboard */; };
@@ -44,7 +48,13 @@
 		F1329E792105A01800539268 /* SpeakToTxtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeakToTxtViewController.h; sourceTree = "<group>"; };
 		F1329E7A2105A01800539268 /* SpeakToTxtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeakToTxtViewController.m; sourceTree = "<group>"; };
 		F1329E7C2105A04800539268 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		F1353E28212FE672004502F4 /* SYRFaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRFaceViewController.h; sourceTree = "<group>"; };
+		F1353E29212FE672004502F4 /* SYRFaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRFaceViewController.m; sourceTree = "<group>"; };
+		F1353E2B212FEA6A004502F4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		F15A622220EE17BC008219CB /* common.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.pch; sourceTree = "<group>"; };
+		F198EF75211BD3C60059C384 /* SYRWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRWebView.h; sourceTree = "<group>"; };
+		F198EF76211BD3C60059C384 /* SYRWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRWebView.m; sourceTree = "<group>"; };
+		F198EF78211BEE6E0059C384 /* demo-tab-webview */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "demo-tab-webview"; path = "../../../Downloads/demo-tab-webview"; sourceTree = "<group>"; };
 		F1E7043920D29CD1009D82F1 /* iOS学习笔记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS学习笔记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7043C20D29CD1009D82F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1E7043D20D29CD1009D82F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +69,7 @@
 		F1E7045520D3872F009D82F1 /* SYRProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRProtocol.h; sourceTree = "<group>"; };
 		F1E7045820D89AF7009D82F1 /* SYRH5WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRH5WebViewController.h; sourceTree = "<group>"; };
 		F1E7045920D89AF7009D82F1 /* SYRH5WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRH5WebViewController.m; sourceTree = "<group>"; };
+		F1E9C7B121227BB900F22692 /* iOS学习笔记.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iOS学习笔记.entitlements"; sourceTree = "<group>"; };
 		F1EACCC020FF759A0095F4BA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F1EACCC220FF75AE0095F4BA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F1EACCC420FF75C70095F4BA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -72,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1353E2C212FEA6A004502F4 /* GLKit.framework in Frameworks */,
 				F1329E7D2105A04800539268 /* Speech.framework in Frameworks */,
 				F1329E7721059F2200539268 /* PgySDK.framework in Frameworks */,
 				F1329E7821059F2200539268 /* PgyUpdate.framework in Frameworks */,
@@ -105,6 +117,15 @@
 			path = TabView;
 			sourceTree = "<group>";
 		};
+		F1353E27212FE62F004502F4 /* face */ = {
+			isa = PBXGroup;
+			children = (
+				F1353E28212FE672004502F4 /* SYRFaceViewController.h */,
+				F1353E29212FE672004502F4 /* SYRFaceViewController.m */,
+			);
+			path = face;
+			sourceTree = "<group>";
+		};
 		F1E7043020D29CD1009D82F1 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +146,9 @@
 		F1E7043B20D29CD1009D82F1 /* iOS学习笔记 */ = {
 			isa = PBXGroup;
 			children = (
+				F1353E27212FE62F004502F4 /* face */,
+				F1E9C7B121227BB900F22692 /* iOS学习笔记.entitlements */,
+				F198EF78211BEE6E0059C384 /* demo-tab-webview */,
 				F1089C9120DD05D800A36430 /* TabView */,
 				F1089C8D20DCD6B800A36430 /* Model */,
 				F1E7043C20D29CD1009D82F1 /* AppDelegate.h */,
@@ -146,6 +170,8 @@
 				F15A622220EE17BC008219CB /* common.pch */,
 				F1329E792105A01800539268 /* SpeakToTxtViewController.h */,
 				F1329E7A2105A01800539268 /* SpeakToTxtViewController.m */,
+				F198EF75211BD3C60059C384 /* SYRWebView.h */,
+				F198EF76211BD3C60059C384 /* SYRWebView.m */,
 			);
 			path = "iOS学习笔记";
 			sourceTree = "<group>";
@@ -153,6 +179,7 @@
 		F1EACCBF20FF75990095F4BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1353E2B212FEA6A004502F4 /* GLKit.framework */,
 				F1329E7C2105A04800539268 /* Speech.framework */,
 				F1329E7521059F2200539268 /* PgySDK.framework */,
 				F1329E7621059F2200539268 /* PgyUpdate.framework */,
@@ -198,6 +225,11 @@
 					F1E7043820D29CD1009D82F1 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -227,6 +259,7 @@
 				F1E7044C20D29CD1009D82F1 /* LaunchScreen.storyboard in Resources */,
 				F1E7044920D29CD1009D82F1 /* Assets.xcassets in Resources */,
 				F1089C9720DD0ABB00A36430 /* Media.xcassets in Resources */,
+				F198EF79211BEE6E0059C384 /* demo-tab-webview in Resources */,
 				F1E7044420D29CD1009D82F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +273,10 @@
 			files = (
 				F1E7045A20D89AF7009D82F1 /* SYRH5WebViewController.m in Sources */,
 				F1089C8A20DB9B4B00A36430 /* SYRViewController.m in Sources */,
+				F1353E2A212FE672004502F4 /* SYRFaceViewController.m in Sources */,
 				F1E7044120D29CD1009D82F1 /* ViewController.m in Sources */,
 				F1E7043E20D29CD1009D82F1 /* AppDelegate.m in Sources */,
+				F198EF77211BD3C60059C384 /* SYRWebView.m in Sources */,
 				F1329E7B2105A01800539268 /* SpeakToTxtViewController.m in Sources */,
 				F1089C9420DD061500A36430 /* SYRTabViewViewController.m in Sources */,
 				F1E7044F20D29CD1009D82F1 /* main.m in Sources */,
@@ -380,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "iOS学习笔记/iOS学习笔记.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66429YD7GV;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -390,7 +426,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS学习笔记/common.pch";
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syr.study.day.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "iOS学习笔记/iOS学习笔记.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66429YD7GV;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -412,7 +449,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS学习笔记/common.pch";
 				INFOPLIST_FILE = "iOS学习笔记/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syr.study.day.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SYRViewController.h"
 #import "SYRTabViewViewController.h"
+#import "SYRFaceViewController.h"
 #import <PgySDK/PgyManager.h>
 #import <PgyUpdate/PgyUpdateManager.h>
 
@@ -20,6 +21,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self replyPushNotificationAuthorization:application];
+    
     // Override point for customization after application launch.
     //启动基本SDK
     [[PgyManager sharedPgyManager] startManagerWithAppId:@"PGY_APP_ID"];
@@ -28,16 +32,74 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    //SYRViewController *mv = [[SYRViewController alloc]init];
-    SYRTabViewViewController *tab = [[SYRTabViewViewController alloc]init];
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tab];
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    SYRTabViewViewController *tab = [[SYRTabViewViewController alloc]init];
+//    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tab];
+    SYRFaceViewController *face = [[SYRFaceViewController alloc]init];
+    [self.window setRootViewController:face];
     //使用navigationController
-    self.window.rootViewController = navigationController;
+    //self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
 
+#pragma mark - 申请通知权限
+// 申请通知权限
+- (void)replyPushNotificationAuthorization:(UIApplication *)application{
+    
+    if (IOS10_OR_LATER) {
+        //iOS 10 later
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        //必须写代理，不然无法监听通知的接收与点击事件
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (!error && granted) {
+                //用户点击允许
+                NSLog(@"注册成功");
+            }else{
+                //用户点击不允许
+                NSLog(@"注册失败");
+            }
+        }];
+        
+        // 可以通过 getNotificationSettingsWithCompletionHandler 获取权限设置
+        //之前注册推送服务，用户点击了同意还是不同意，以及用户之后又做了怎样的更改我们都无从得知，现在 apple 开放了这个 API，我们可以直接获取到用户的设定信息了。注意UNNotificationSettings是只读对象哦，不能直接修改！
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            NSLog(@"========%@",settings);
+        }];
+    }else if (IOS8_OR_LATER){
+        //iOS 8 - iOS 10系统
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }else{
+        //iOS 8.0系统以下
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+    }
+    
+    //注册远端消息通知获取device token
+    [application registerForRemoteNotifications];
+}
+
+#pragma  mark - 获取device Token
+//获取DeviceToken成功
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    
+    //解析NSData获取字符串
+    //我看网上这部分直接使用下面方法转换为string，你会得到一个nil（别怪我不告诉你哦）
+    //错误写法
+    //NSString *string = [[NSString alloc] initWithData:deviceToken encoding:NSUTF8StringEncoding];
+    
+    
+    //正确写法
+    NSString *deviceString = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    deviceString = [deviceString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSLog(@"deviceToken===========%@",deviceString);
+}
+
+//获取DeviceToken失败
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"[DeviceToken Error]:%@\n",error.description);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     //应用从活动状态进入非活动状态时调用该方法并且发出通知

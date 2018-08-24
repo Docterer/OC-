@@ -10,11 +10,13 @@
 #import "SYRViewController.h"
 #import "SYRH5WebViewController.h"
 #import "SpeakToTxtViewController.h"
+#import "SYRWebView.h"
 
 @interface SYRTabViewViewController ()
 @property(nonatomic,strong) SYRH5WebViewController *syrH5View;
 @property(nonatomic,strong) SYRViewController *syrView;
 @property(nonatomic,strong) SpeakToTxtViewController *speakView;
+@property(nonatomic,strong) SYRWebView *syrWeb;
 @end
 
 @implementation SYRTabViewViewController
@@ -28,7 +30,8 @@
     UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:self.syrH5View];
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:self.syrView];
     UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:self.speakView];
-    self.viewControllers = @[nav1,nav2,nav3];
+    UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:self.syrWeb];
+    self.viewControllers = @[nav1,nav2,nav3,nav4];
 }
 
 #pragma tab set
@@ -60,6 +63,16 @@
         [_speakView.tabBarItem setImage:[UIImage imageNamed:@"动态"]];
     }
     return _speakView;
+}
+
+-(SYRWebView *)syrWeb
+{
+    if(_syrWeb == nil){
+        _syrWeb  = [[SYRWebView alloc]init];
+        [_syrWeb .tabBarItem setTitle:@"测试"];
+        [_syrWeb .tabBarItem setImage:[UIImage imageNamed:@"动态"]];
+    }
+    return _syrWeb ;
 }
 
 - (void)didReceiveMemoryWarning {
