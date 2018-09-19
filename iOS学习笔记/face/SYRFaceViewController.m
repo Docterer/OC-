@@ -42,7 +42,7 @@
     //设置背景色
     UIColor *backColor= [UIColor colorWithRed:44/255.0 green:44/255.0 blue:44/255.0 alpha:1];
     [self.view setBackgroundColor:backColor];
-    
+    NSLog(@"-->>>>>%@",self.view);
     //添加摄像设备
     [self setupCaptureSession];
     //添加进度条

@@ -10,6 +10,7 @@
 #import "SYRViewController.h"
 #import "SYRTabViewViewController.h"
 #import "SYRFaceViewController.h"
+#import "ValidateViewController.h"
 #import <PgySDK/PgyManager.h>
 #import <PgyUpdate/PgyUpdateManager.h>
 
@@ -32,12 +33,14 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-//    SYRTabViewViewController *tab = [[SYRTabViewViewController alloc]init];
-//    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tab];
-    SYRFaceViewController *face = [[SYRFaceViewController alloc]init];
-    [self.window setRootViewController:face];
+    SYRTabViewViewController *tab = [[SYRTabViewViewController alloc]init];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tab];
+//    SYRFaceViewController *face = [[SYRFaceViewController alloc]init];
+//    [self.window setRootViewController:face];
+//    ValidateViewController *volView = [[ValidateViewController alloc]init];
+//    [self.window setRootViewController:volView];
     //使用navigationController
-    //self.window.rootViewController = navigationController;
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

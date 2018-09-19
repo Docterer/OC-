@@ -142,35 +142,15 @@
 
 #pragma mark - click
 - (void)BtnClick:(UIButton *)sender {
-//    if ([self.audioEngine isRunning]) {
-//        [self.audioEngine stop];
-//        [self.recognitionRequest endAudio];
-//        self.recordingBtn.enabled = YES;
-//        [self.recordingBtn setTitle:@"开始" forState:UIControlStateNormal];
-//    }else{
-//        [self startRecording];
-//        [self.recordingBtn setTitle:@"停止" forState:UIControlStateNormal];
-//    }
-    NSLog(@"执行了点击事件");
-    
-    //之前配置的白名单，就是需要跳转对方App的key，即对方设置的url
-    // xxxxx :可以将参数拼接在url后边，这样在另一个APP的openUrl方法中，解析这个url中的参数就可以了
-    NSString * UrlStr = @"bbq://name=iPhone6&price=5288";
-    
-    NSURL * url = [NSURL URLWithString:UrlStr];
-    
-    // 在这里可以先做个判断
-    if ([[UIApplication sharedApplication]canOpenURL:url]) {
-        
-        [[UIApplication sharedApplication] openURL:url options:nil completionHandler:nil];
-        
+    if ([self.audioEngine isRunning]) {
+        [self.audioEngine stop];
+        [self.recognitionRequest endAudio];
+        self.recordingBtn.enabled = YES;
+        [self.recordingBtn setTitle:@"开始" forState:UIControlStateNormal];
     }else{
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"跳转的应用程序未安装" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
-        
-        [alert show];
+        [self startRecording];
+        [self.recordingBtn setTitle:@"停止" forState:UIControlStateNormal];
     }
-
 }
 
 #pragma mark - longPress
